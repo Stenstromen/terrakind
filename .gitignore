@@ -1,0 +1,17 @@
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+tfplan
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+bin/
+cover.out
+.terraform.lock.hcl
+.terraformrc
+manifests/
+manifests.tar.gz
+.manifests.done
+terrakind-cluster-config
