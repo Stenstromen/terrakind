@@ -34,8 +34,11 @@ resource "kind_cluster" "default" {
       }
     }
 
-    node {
-      role = "worker"
+    dynamic "node" {
+      for_each = range(var.worker_nodes)
+      content {
+        role = "worker"
+      }
     }
   }
 }

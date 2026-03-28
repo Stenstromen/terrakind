@@ -1,0 +1,29 @@
+apiVersion: policies.kyverno.io/v1
+kind: MutatingPolicy
+metadata:
+  name: enforce-pod-labels
+spec:
+  matchConstraints:
+    resourceRules:
+      - apiGroups: ['']
+        apiVersions: ['v1']
+        operations: ['CREATE', 'UPDATE']
+        resources: ['pods']
+  mutations:
+    - patchType: ApplyConfiguration
+      applyConfiguration:
+        expression: >
+          Object{
+            metadata: Object.metadata{
+              labels: Object.metadata.labels{
+                stenstromen.se/cluster: "terrakind-cluster"
+                stenstromen.se/environment: "development"
+                stenstromen.se/team: "terrakind"
+                stenstromen.se/project: "terrakind"
+                stenstromen.se/service: "terrakind"
+                stenstromen.se/component: "terrakind"
+                stenstromen.se/version: "1.0.0"
+                stenstromen.se/managed-by: "kyverno"
+              }
+            }
+          }

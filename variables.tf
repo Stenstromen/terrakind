@@ -1,7 +1,7 @@
 variable "node_image" {
   description = "Image to use for the Kind cluster"
   type        = string
-  default     = "kindest/node:v1.34.0"
+  default     = "kindest/node:v1.35.0"
 }
 
 variable "kind_api_version" {
@@ -14,6 +14,12 @@ variable "cluster_name" {
   description = "Name of the Kind cluster"
   type        = string
   default     = "terrakind-cluster"
+}
+
+variable "worker_nodes" {
+  description = "Number of worker nodes in the Kind cluster"
+  type        = number
+  default     = 3
 }
 
 variable "github_token" {
