@@ -4,6 +4,7 @@ metadata:
   labels:
     app: test-dep
   name: test-dep
+  namespace: nginx
 spec:
   replicas: 1
   selector:
