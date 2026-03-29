@@ -11,5 +11,5 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./clusters/terrakind-cluster/infra/kyverno-policies
+  path: ./clusters/terrakind-cluster/policies/kyverno
   prune: true
