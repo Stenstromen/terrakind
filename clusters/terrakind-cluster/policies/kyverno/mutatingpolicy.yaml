@@ -16,15 +16,15 @@ spec:
         expression: >
           Object{
             metadata: Object.metadata{
-              labels: Object.metadata.labels{
-                stenstromen.se/cluster: "terrakind-cluster"
-                stenstromen.se/environment: "development"
-                stenstromen.se/team: "terrakind"
-                stenstromen.se/project: "terrakind"
-                stenstromen.se/service: "terrakind"
-                stenstromen.se/component: "terrakind"
-                stenstromen.se/version: "1.0.0"
-                stenstromen.se/managed-by: "kyverno"
+              labels: {
+                "stenstromen.se/cluster": "terrakind-cluster",
+                "stenstromen.se/environment": "development",
+                "stenstromen.se/team": "terrakind",
+                "stenstromen.se/project": "terrakind",
+                "stenstromen.se/service": "terrakind",
+                "stenstromen.se/component": "terrakind",
+                "stenstromen.se/version": "1.0.0",
+                "stenstromen.se/managed-by": "kyverno"
               }
             }
           }
