@@ -11,9 +11,11 @@ plan:
 
 apply:
 	tofu apply -auto-approve $(TFPLAN)
+	git pull
 
 destroy:
 	tofu destroy -auto-approve
+	git pull
 
 reset:
 	$(MAKE) destroy
