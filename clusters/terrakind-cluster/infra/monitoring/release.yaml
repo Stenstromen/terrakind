@@ -33,6 +33,14 @@ spec:
     grafana:
       enabled: true
       adminPassword: admin
+      additionalDataSources:
+        - name: Loki
+          type: loki
+          url: http://loki:3100
+          access: proxy
+          isDefault: false
+          jsonData:
+            maxLines: 1000
     alertmanager:
       enabled: true
       alertmanagerSpec:
