@@ -40,3 +40,15 @@ variable "github_repository" {
   type        = string
   default     = "terrakind"
 }
+
+variable "flux_branch" {
+  description = "Branch to use for the Flux repository"
+  type        = string
+  default     = "main"
+}
+
+variable "flux_path" {
+  description = "Path to use for the Flux repository"
+  type        = string
+  default     = "clusters/terrakind-cluster"
+}
