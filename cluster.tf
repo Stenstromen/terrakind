@@ -3,12 +3,6 @@ resource "kind_cluster" "default" {
   node_image     = var.node_image
   wait_for_ready = true
 
-  lifecycle {
-    prevent_destroy = false
-
-    create_before_destroy = true
-  }
-
   kind_config {
     kind        = "Cluster"
     api_version = var.kind_api_version

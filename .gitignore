@@ -15,4 +15,5 @@ manifests/
 manifests.tar.gz
 .manifests.done
 terrakind-cluster-config
-.envrc  
+.envrc
+*.tfplan
