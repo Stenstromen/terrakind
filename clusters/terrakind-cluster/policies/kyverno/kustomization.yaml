@@ -4,4 +4,5 @@ kind: Kustomization
 metadata:
   name: kyverno-policies
 resources:
-  - mutatingpolicy.yaml
+  - enforce-pod-labels.yaml
+  - disallow-latest-tag.yaml
